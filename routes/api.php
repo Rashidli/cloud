@@ -23,7 +23,6 @@ Route::group(['middleware'=>'setLocale'], function (){
 
     Route::get('/blogs', [ApiController::class, 'blogs']);
     Route::get('/blog_single/{id}', [ApiController::class, 'blog_single']);
+    Route::get('/faqs', [ApiController::class,'faqs']);
 
 });
-
-

@@ -7,9 +7,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Blog extends Model
+class Faq extends Model
 {
+
     use HasFactory, Translatable, SoftDeletes;
+
     public $translatedAttributes = ['title', 'content'];
-    protected $fillable = ['image','is_active'];
+
+    protected $fillable = ['is_active'];
 }

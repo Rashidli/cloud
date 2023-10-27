@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\BlogResource;
+use App\Http\Resources\FaqResource;
 use App\Models\Blog;
+use App\Models\Faq;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 
@@ -26,4 +28,13 @@ class ApiController extends Controller
         return new BlogResource(Blog::where('is_active', true)->findOrFail($id));
 
     }
+
+    public function faqs()
+    {
+        $faqs = Faq::where('is_active', true)->orderBy('id','desc')->get();
+
+        return FaqResource::collection($faqs);
+    }
+
+
 }

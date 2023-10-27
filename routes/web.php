@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BankController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\IncomeController;
 use App\Http\Controllers\InstitutionController;
 use App\Http\Controllers\PageController;
@@ -25,7 +26,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/rest',function (){
+Route::get('/optimize_clear',function (){
    \Illuminate\Support\Facades\Artisan::call('optimize:clear');
 });
 
@@ -51,5 +52,6 @@ Route::group(['middleware' =>'auth'], function (){
     Route::resource('incomes',IncomeController::class);
 
     Route::resource('blogs',BlogController::class);
+    Route::resource('faqs',FaqController::class);
 
 });

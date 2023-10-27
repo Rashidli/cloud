@@ -182,6 +182,13 @@
                         </a>
                     </li>
 
+                    <li>
+                        <a href="{{route('faqs.index')}}">
+                            <i class="ri-layout-3-line"></i>
+                            <span>Faq</span>
+                        </a>
+                    </li>
+
                 </ul>
             </div>
             <!-- Sidebar -->
